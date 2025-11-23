@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "vars": {
+    "COMFY_HOME": "/workspace/ComfyUI"
+  },
+  "paths": {
+    "DIFFUSION_MODELS_DIR": "{COMFY_HOME}/models/diffusion_models",
+    "TEXT_ENCODERS_DIR": "{COMFY_HOME}/models/text_encoders",
+    "CLIP_VISION_DIR": "{COMFY_HOME}/models/clip_vision",
+    "VAE_DIR": "{COMFY_HOME}/models/vae",
+    "LORAS_DIR": "{COMFY_HOME}/models/loras",
+    "DETECTION_DIR": "{COMFY_HOME}/models/detection",
+    "UPSCALE_DIR": "{COMFY_HOME}/models/upscale_models",
+    "SAMS_DIR": "{COMFY_HOME}/models/sams",
+    "CTRLNET_DIR": "{COMFY_HOME}/models/controlnet"
+},
+  "sections": {
+    "download_base_loras": [
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/BlowJob_HIGH.safetensors",
+        "path": "{LORAS_DIR}/BlowJob_HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/BlowJob_LOW.safetensors",
+        "path": "{LORAS_DIR}/BlowJob_LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/Body_Shots_HIGH.safetensors",
+        "path": "{LORAS_DIR}/Body_Shots_HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/Body_Shots_LOW.safetensors",
+        "path": "{LORAS_DIR}/Body_Shots_LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/DR34MJOB_I2V_14b_HighNoise-mid_1395313-vid_2235299.safetensors",
+        "path": "{LORAS_DIR}/DR34MJOB_I2V_14b_HighNoise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/DR34MJOB_I2V_14b_LowNoise-mid_1395313-vid_2235288.safetensors",
+        "path": "{LORAS_DIR}/DR34MJOB_I2V_14b_LowNoise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/DR34ML4Y_I2V_14B_HIGH-mid_1811313-vid_2176505.safetensors",
+        "path": "{LORAS_DIR}/DR34ML4Y_I2V_14B_HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/DR34ML4Y_I2V_14B_LOW-mid_1811313-vid_2190476.safetensors",
+        "path": "{LORAS_DIR}/DR34ML4Y_I2V_14B_LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/WAN-2.2-I2V-HandjobBlowjobCombo-HIGH-v1.safetensors",
+        "path": "{LORAS_DIR}/WAN-2.2-I2V-HandjobBlowjobCombo-HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/WAN-2.2-I2V-HandjobBlowjobCombo-LOW-v1 (2).safetensors",
+        "path": "{LORAS_DIR}/WAN-2.2-I2V-HandjobBlowjobCombo-LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/WAN-2.2-I2V-POV-Body-Cumshot-Pullout-HIGH-v1.safetensors",
+        "path": "{LORAS_DIR}/WAN-2.2-I2V-POV-Body-Cumshot-Pullout-HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/WAN-2.2-I2V-POV-Body-Cumshot-Pullout-LOW-v1.safetensors",
+        "path": "{LORAS_DIR}/WAN-2.2-I2V-POV-Body-Cumshot-Pullout-LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/Wan2_2_-_I2V_-_Missionary_Sex_-_HIGH_14B.safetensors",
+        "path": "{LORAS_DIR}/Wan2_2_-_I2V_-_Missionary_Sex_-_HIGH_14B.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/Wan2_2_-_I2V_-_Missionary_Sex_-_LOW_14B.safetensors",
+        "path": "{LORAS_DIR}/Wan2_2_-_I2V_-_Missionary_Sex_-_LOW_14B.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/anal_insertion_HIGH_V01.safetensors",
+        "path": "{LORAS_DIR}/anal_insertion_HIGH.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/anal_insertion_LOW_V01.safetensors",
+        "path": "{LORAS_DIR}/anal_insertion_LOW.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2-i2v-high-oral-insertion-v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2-i2v-high-oral-insertion.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2-i2v-low-oral-insertion-v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2-i2v-low-oral-insertion.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2-i2v-low-pov-insertion-v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2-i2v-low-pov-insertion.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2-i2v-high-pov-insertion-v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2-i2v-high-pov-insertion.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2_i2v_highnoise_pov_missionary_v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2_i2v_highnoise_pov_missionary.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan2.2_i2v_lownoise_pov_missionary_v1.0.safetensors",
+        "path": "{LORAS_DIR}/wan2.2_i2v_lownoise_pov_missionary.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22-cunilingus-I2V-106epoc-high.safetensors",
+        "path": "{LORAS_DIR}/wan22-cunilingus-I2V-high.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22-cunilingus-I2V-72epoc-low.safetensors",
+        "path": "{LORAS_DIR}/wan22-cunilingus-I2V-low.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22.r3v3rs3_c0wg1rl-14b-High-i2v_e70.safetensors",
+        "path": "{LORAS_DIR}/wan22.r3v3rs3_c0wg1rl-14b-High-i2v.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22.r3v3rs3_c0wg1rl-14b-Low-i2v_e70.safetensors",
+        "path": "{LORAS_DIR}/wan22.r3v3rs3_c0wg1rl-14b-Low-i2v.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_14B_5H1V_lora_high_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_14B_5H1V_lora_high_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_14B_5H1V_lora_low_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_14B_5H1V_lora_low_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_i2v_14B_5H1V_high_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_i2v_14B_5H1V_high_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_i2v_14B_5H1V_low_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_i2v_14B_5H1V_low_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_i2v_anal_v1_high_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_i2v_anal_v1_high_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan22_i2v_anal_v1_low_noise.safetensors",
+        "path": "{LORAS_DIR}/wan22_i2v_anal_v1_low_noise.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan_fingering_pussy_i2v2.2hi_v10.safetensors",
+        "path": "{LORAS_DIR}/wan_fingering_pussy_i2v_hi.safetensors"
+      },
+      {
+        "url": "https://huggingface.co/markwelshboyx/MyLoras/resolve/main/wan_fingering_pussy_i2v2.2lo_v10.safetensors",
+        "path": "{LORAS_DIR}/wan_fingering_pussy_i2v_lo.safetensors"
+      }
+    ]
+  }
+}
+
+
+
