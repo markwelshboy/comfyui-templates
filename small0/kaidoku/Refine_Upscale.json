@@ -1,0 +1,1961 @@
+{
+  "id": "b23c0571-6e0c-460c-9cf7-757876ed5e47",
+  "revision": 0,
+  "last_node_id": 56,
+  "last_link_id": 86,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "LoadImageListFromDir //Inspire",
+      "pos": [
+        -6521.232706989071,
+        3104.543585139492
+      ],
+      "size": [
+        353.70885822520574,
+        194
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "shape": 6,
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "FILE PATH",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inspire-pack",
+        "ver": "d23db9aa544de9a6d4c609cb7005fa9e0d42031d",
+        "Node name for S&R": "LoadImageListFromDir //Inspire",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        "",
+        3,
+        0,
+        false,
+        "Alphabetical (ASC)"
+      ],
+      "shape": 2
+    },
+    {
+      "id": 25,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        -3676.4715974541814,
+        2624.9002923055577
+      ],
+      "size": [
+        1179.4682824081565,
+        1427.1921302385708
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "BEFORE UPSCALE",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 40
+        },
+        {
+          "dir": 3,
+          "label": "AFTER UPSCALE",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [],
+      "title": "BEFORE AFTER UPSCALE",
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "42e73c3c48e8268129a6a1ea6d9766913bfc5435",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "version": "7.5.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_hrmad_00091_.png&type=temp&subfolder=&rand=0.6712423224873025"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_hrmad_00092_.png&type=temp&subfolder=&rand=0.3543643936987725"
+          }
+        ]
+      ],
+      "shape": 2
+    },
+    {
+      "id": 23,
+      "type": "easy cleanGpuUsed",
+      "pos": [
+        -4312.019090630146,
+        3240.254563360696
+      ],
+      "size": [
+        161.3404296875,
+        26
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "125b3a4905ac9367f7aae5c2df67e2282f0a3d37",
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4"
+        }
+      },
+      "widgets_values": [],
+      "shape": 2
+    },
+    {
+      "id": 30,
+      "type": "easy clearCacheAll",
+      "pos": [
+        -4112.136210826206,
+        3239.9372559871895
+      ],
+      "size": [
+        141.7896484375,
+        26
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "125b3a4905ac9367f7aae5c2df67e2282f0a3d37",
+        "Node name for S&R": "easy clearCacheAll",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4"
+        }
+      },
+      "widgets_values": [],
+      "shape": 2
+    },
+    {
+      "id": 22,
+      "type": "easy cleanGpuUsed",
+      "pos": [
+        -4684.189205034603,
+        3240.9794158236805
+      ],
+      "size": [
+        179.97595600986088,
+        26
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "125b3a4905ac9367f7aae5c2df67e2282f0a3d37",
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4"
+        }
+      },
+      "widgets_values": [],
+      "shape": 2
+    },
+    {
+      "id": 28,
+      "type": "easy clearCacheAll",
+      "pos": [
+        -4488.345073094667,
+        3241.119341584276
+      ],
+      "size": [
+        141.7896484375,
+        26
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "125b3a4905ac9367f7aae5c2df67e2282f0a3d37",
+        "Node name for S&R": "easy clearCacheAll",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4"
+        }
+      },
+      "widgets_values": [],
+      "shape": 2
+    },
+    {
+      "id": 24,
+      "type": "SaveImage",
+      "pos": [
+        -3998.625252664364,
+        2648.454226441608
+      ],
+      "size": [
+        261.49982137330244,
+        474.8411720280337
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 70
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        "Refined/%date:yyyy-MM-dd%/%date:hhmmss%"
+      ],
+      "shape": 2
+    },
+    {
+      "id": 29,
+      "type": "SeedVR2LoadVAEModel",
+      "pos": [
+        -4678.638356625409,
+        2863.9732187547497
+      ],
+      "size": [
+        354.4421650942635,
+        298
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2LoadVAEModel",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model": true,
+            "device": true,
+            "encode_tiled": true,
+            "encode_tile_size": true,
+            "encode_tile_overlap": true,
+            "decode_tiled": true,
+            "decode_tile_size": true,
+            "decode_tile_overlap": true,
+            "tile_debug": true,
+            "offload_device": true,
+            "cache_model": true
+          },
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        },
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        true,
+        1024,
+        128,
+        true,
+        1024,
+        128,
+        "false",
+        "cpu",
+        true
+      ],
+      "shape": 2
+    },
+    {
+      "id": 20,
+      "type": "SeedVR2LoadDiTModel",
+      "pos": [
+        -4681.289341555727,
+        2618.95862597112
+      ],
+      "size": [
+        356.01170787138324,
+        202
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2LoadDiTModel",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model": true,
+            "device": true,
+            "blocks_to_swap": true,
+            "swap_io_components": true,
+            "offload_device": true,
+            "cache_model": true,
+            "attention_mode": true
+          },
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        },
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        "seedvr2_ema_7b_sharp_fp16.safetensors",
+        "cuda:0",
+        36,
+        true,
+        "cpu",
+        true,
+        "sdpa"
+      ],
+      "shape": 2
+    },
+    {
+      "id": 33,
+      "type": "SeedVR2VideoUpscaler",
+      "pos": [
+        -4312.1481857731405,
+        2620.3799714041184
+      ],
+      "size": [
+        269.956640625,
+        386
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "link": 31
+        },
+        {
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "link": 32
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "widget": {
+            "name": "resolution"
+          },
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23,
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2VideoUpscaler",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "seed": true,
+            "resolution": true,
+            "max_resolution": true,
+            "batch_size": true,
+            "uniform_batch_size": true,
+            "color_correction": true,
+            "temporal_overlap": true,
+            "prepend_frames": true,
+            "input_noise_scale": true,
+            "latent_noise_scale": true,
+            "offload_device": true,
+            "enable_debug": true
+          },
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        },
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        4105349922,
+        "fixed",
+        4096,
+        4096,
+        1,
+        false,
+        "wavelet_adaptive",
+        0,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ],
+      "shape": 2
+    },
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": [
+        -6519.984664457571,
+        2622.594275268458
+      ],
+      "size": [
+        337.4181451297891,
+        326
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            43
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "shape": 2
+    },
+    {
+      "id": 52,
+      "type": "ImageScaleBy",
+      "pos": [
+        -5971.592814255355,
+        2606.3933865919325
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.6.0",
+        "Node name for S&R": "ImageScaleBy",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        0.5
+      ]
+    },
+    {
+      "id": 56,
+      "type": "Image Grain Add",
+      "pos": [
+        -5972.791713114697,
+        2721.107778604079
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "RES4LYF",
+        "ver": "a3999a56a650da5cffe9e8f9f8b115f764603620",
+        "Node name for S&R": "Image Grain Add",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        0.2
+      ]
+    },
+    {
+      "id": 54,
+      "type": "ImageSharpen",
+      "pos": [
+        -5973.519270955622,
+        2811.6428138617694
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            82
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.6.0",
+        "Node name for S&R": "ImageSharpen",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        1,
+        3,
+        0.1
+      ]
+    },
+    {
+      "id": 40,
+      "type": "Int",
+      "pos": [
+        -5367.379252277737,
+        2882.136416926773
+      ],
+      "size": [
+        324.1255472270915,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            57,
+            60,
+            61
+          ]
+        }
+      ],
+      "title": "TILE SIZE (320 default)",
+      "properties": {
+        "cnr_id": "ComfyLiterals",
+        "ver": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
+        "Node name for S&R": "Int",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "Number": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "480"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "Divide Image and Select Tile",
+      "pos": [
+        -5038.7723750045625,
+        2884.3514503917704
+      ],
+      "size": [
+        324.1255472270915,
+        80
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "name": "dac_data",
+          "type": "DAC_DATA",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "TILE(S)",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            49,
+            63
+          ]
+        },
+        {
+          "name": "ui",
+          "type": "UI",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Divide Image and Select Tile",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 55,
+      "type": "JPEG artifacts removal FBCNN",
+      "pos": [
+        -5698.021082844402,
+        2970.375382854108
+      ],
+      "size": [
+        290.5259765625,
+        82
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 82
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-workflow-encrypt",
+        "ver": "5ec45fdac73d8bd6d732af76bbe81c94413b3e36",
+        "Node name for S&R": "JPEG artifacts removal FBCNN",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "enable",
+        0
+      ]
+    },
+    {
+      "id": 44,
+      "type": "PreviewImage",
+      "pos": [
+        -5389.029350099857,
+        2998.310878650072
+      ],
+      "size": [
+        678.199711723617,
+        425.2593044704846
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 49
+        }
+      ],
+      "outputs": [],
+      "title": "ALL TILES PREVIEW",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 45,
+      "type": "Float",
+      "pos": [
+        -5727.759973210484,
+        3084.606747145537
+      ],
+      "size": [
+        324.1255472270915,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "float",
+          "type": "FLOAT",
+          "links": [
+            58,
+            71
+          ]
+        }
+      ],
+      "title": "UPSCALE BY",
+      "properties": {
+        "aux_id": "YaserJaradeh/comfyui-yaser-nodes",
+        "ver": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
+        "Node name for S&R": "Float",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "Number": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "ComfyLiterals"
+      },
+      "widgets_values": [
+        3
+      ]
+    },
+    {
+      "id": 50,
+      "type": "Multiply Int Float (JPS)",
+      "pos": [
+        -5636.421186834945,
+        2749.7159650359336
+      ],
+      "size": [
+        324.1255472270915,
+        130.55356734908673
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "int_a",
+          "type": "INT",
+          "widget": {
+            "name": "int_a"
+          },
+          "link": 57
+        },
+        {
+          "name": "float_b",
+          "type": "FLOAT",
+          "widget": {
+            "name": "float_b"
+          },
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "int_multiply",
+          "type": "INT",
+          "links": [
+            54,
+            55,
+            69
+          ]
+        },
+        {
+          "name": "float_multiply",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_JPS-Nodes",
+        "ver": "0e2a9aca02b17dde91577bfe4b65861df622dcaf",
+        "Node name for S&R": "Multiply Int Float (JPS)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "int_a": true,
+            "float_b": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Display UI",
+      "pos": [
+        -5307.38998902665,
+        2774.6089264600905
+      ],
+      "size": [
+        324.1255472270915,
+        130.48799535319995
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ui",
+          "type": "*",
+          "link": 46
+        }
+      ],
+      "outputs": [],
+      "title": "Divide Image and Select Tile UI",
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Display UI",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Divide and Conquer Matrix:\n2 (0,0) 1 (420,0)\n4 (0,290) 3 (420,290)\n5 (0,580) 8 (420,580)\n6 (0,870) 7 (420,870)\n"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 47,
+      "type": "Combine Tiles",
+      "pos": [
+        -4964.580557050631,
+        2761.862939564858
+      ],
+      "size": [
+        257.1085204489498,
+        386
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "dac_data",
+          "type": "DAC_DATA",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            65,
+            70
+          ]
+        },
+        {
+          "name": "ui",
+          "type": "UI",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "2.0.4",
+        "Node name for S&R": "Combine Tiles",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "Display UI",
+      "pos": [
+        -4947.8200098925545,
+        2820.054381183521
+      ],
+      "size": [
+        259.45815048485656,
+        390.338385791453
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ui",
+          "type": "*",
+          "link": 48
+        }
+      ],
+      "outputs": [],
+      "title": "Combine Tiles UI",
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Display UI",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Divide and Conquer Matrix:\n2 (0,0) 1 (1260,0)\n4 (0,870) 3 (1260,870)\n5 (0,1740) 8 (1260,1740)\n6 (0,2610) 7 (1260,2610)\n"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 42,
+      "type": "Display UI",
+      "pos": [
+        -5657.298024989145,
+        2839.726373463828
+      ],
+      "size": [
+        324.1255472270915,
+        131.9285768678842
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ui",
+          "type": "*",
+          "link": 47
+        }
+      ],
+      "outputs": [],
+      "title": "Divide and Conquer Algorithm UI",
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Display UI",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Divide and Conquer Algorithm:\nOriginal Image Size: 512x768\nUpscaled Image Size: 2700x4050\nGrid: 2x4 (8 tiles)\nOverlap_x: 180 pixels\nOverlap_y: 570 pixels\nEffective_upscale: 5.27\n"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 46,
+      "type": "LG_Noise",
+      "pos": [
+        -5697.149385790247,
+        2608.779363481379
+      ],
+      "size": [
+        324.1255472270915,
+        330
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_optional",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 79
+        },
+        {
+          "name": "mask_optional",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53,
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_lg_tools",
+        "ver": "1.2.2",
+        "Node name for S&R": "LG_Noise",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "type": true,
+            "opacity": true,
+            "strength": true,
+            "density": true,
+            "sharpen": true,
+            "brightness": true,
+            "random_color": true,
+            "color": true,
+            "seed": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "gaussian",
+        0.25,
+        1,
+        0.35,
+        1,
+        0.4,
+        false,
+        "#808080",
+        2026281523,
+        "randomize",
+        "#808080"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "Divide and Conquer Algorithm",
+      "pos": [
+        -5366.630297294626,
+        2608.2247106790737
+      ],
+      "size": [
+        324.1255472270915,
+        242
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 53
+        },
+        {
+          "name": "upscale_model",
+          "shape": 7,
+          "type": "UPSCALE_MODEL",
+          "link": null
+        },
+        {
+          "name": "tile_width",
+          "type": "INT",
+          "widget": {
+            "name": "tile_width"
+          },
+          "link": 54
+        },
+        {
+          "name": "tile_height",
+          "type": "INT",
+          "widget": {
+            "name": "tile_height"
+          },
+          "link": 55
+        },
+        {
+          "name": "min_scale_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_scale_factor"
+          },
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "dac_data",
+          "type": "DAC_DATA",
+          "links": [
+            50
+          ]
+        },
+        {
+          "name": "ui",
+          "type": "STRING",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Divide and Conquer Algorithm",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        640,
+        640,
+        "1/8 Tile",
+        1,
+        "spiral",
+        "lanczos",
+        false
+      ]
+    },
+    {
+      "id": 51,
+      "type": "Divide and Conquer Algorithm",
+      "pos": [
+        -5039.981979064024,
+        2608.6574237813566
+      ],
+      "size": [
+        324.1255472270915,
+        242
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 59
+        },
+        {
+          "name": "upscale_model",
+          "shape": 7,
+          "type": "UPSCALE_MODEL",
+          "link": null
+        },
+        {
+          "name": "tile_width",
+          "type": "INT",
+          "widget": {
+            "name": "tile_width"
+          },
+          "link": 60
+        },
+        {
+          "name": "tile_height",
+          "type": "INT",
+          "widget": {
+            "name": "tile_height"
+          },
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        },
+        {
+          "name": "dac_data",
+          "type": "DAC_DATA",
+          "links": [
+            52
+          ]
+        },
+        {
+          "name": "ui",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_steudio",
+        "ver": "368b98166584db24beb095c96a2bad9fb442235b",
+        "Node name for S&R": "Divide and Conquer Algorithm",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        320,
+        320,
+        "1/8 Tile",
+        1,
+        "spiral",
+        "lanczos",
+        false
+      ]
+    },
+    {
+      "id": 35,
+      "type": "Reroute",
+      "pos": [
+        -6108.683987162995,
+        2991.0652577048154
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            40,
+            86
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "shape": 2
+    },
+    {
+      "id": 38,
+      "type": "Note",
+      "pos": [
+        -6541.240188797486,
+        3349.656461208681
+      ],
+      "size": [
+        389.66926981075267,
+        174.00966269451737
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "If you want to run it with multiple images in sequence, than you have to just connect the \"IMAGE\" output to the reroute node and enter your image folder path\n\nIn \"image_load_cap\" you have to enter the amount of images you wanna upscale in your folder. Otherwise it will endless run in upscaling loops\n\nThe start_index is at which image in the folder you want to start with upscaling\n\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 2
+    }
+  ],
+  "links": [
+    [
+      23,
+      33,
+      0,
+      23,
+      0,
+      "*"
+    ],
+    [
+      27,
+      22,
+      0,
+      28,
+      0,
+      "*"
+    ],
+    [
+      28,
+      23,
+      0,
+      30,
+      0,
+      "*"
+    ],
+    [
+      31,
+      20,
+      0,
+      33,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      32,
+      29,
+      0,
+      33,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      40,
+      35,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      26,
+      0,
+      35,
+      0,
+      "*"
+    ],
+    [
+      45,
+      28,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      46,
+      48,
+      1,
+      41,
+      0,
+      "UI"
+    ],
+    [
+      47,
+      49,
+      2,
+      42,
+      0,
+      "STRING"
+    ],
+    [
+      48,
+      47,
+      1,
+      43,
+      0,
+      "UI"
+    ],
+    [
+      49,
+      48,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      49,
+      1,
+      47,
+      1,
+      "DAC_DATA"
+    ],
+    [
+      51,
+      51,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      51,
+      1,
+      48,
+      1,
+      "DAC_DATA"
+    ],
+    [
+      53,
+      46,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      50,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      55,
+      50,
+      0,
+      49,
+      3,
+      "INT"
+    ],
+    [
+      57,
+      40,
+      0,
+      50,
+      0,
+      "INT"
+    ],
+    [
+      58,
+      45,
+      0,
+      50,
+      1,
+      "FLOAT"
+    ],
+    [
+      59,
+      46,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      40,
+      0,
+      51,
+      2,
+      "INT"
+    ],
+    [
+      61,
+      40,
+      0,
+      51,
+      3,
+      "INT"
+    ],
+    [
+      63,
+      48,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      33,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      47,
+      0,
+      25,
+      1,
+      "IMAGE"
+    ],
+    [
+      69,
+      50,
+      0,
+      33,
+      3,
+      "INT"
+    ],
+    [
+      70,
+      47,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      71,
+      45,
+      0,
+      49,
+      4,
+      "FLOAT"
+    ],
+    [
+      79,
+      52,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      82,
+      54,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      55,
+      0,
+      56,
+      0,
+      "IMAGE"
+    ],
+    [
+      85,
+      56,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      35,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "SINGLE IMAGE",
+      "bounding": [
+        -6537.584141258141,
+        2540.529482769919,
+        382.6856760735427,
+        447.7643419001938
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "MULTIPLE IMAGES",
+      "bounding": [
+        -6537.38471586508,
+        2990.788134705474,
+        383.1168985227432,
+        323.9032662542263
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Add Grain",
+      "bounding": [
+        -5977.691003326966,
+        2538.9913775160285,
+        1281.7704306832347,
+        895.4116652939551
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "SeedVR2",
+      "bounding": [
+        -4692.977839827485,
+        2539.0623606471977,
+        664.782218261752,
+        634.7682381499586
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "Save Image",
+      "bounding": [
+        -4025.8075922800003,
+        2539.1115488592714,
+        317.39037192082424,
+        634.4659117983697
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 8,
+      "title": "Preview/Compare",
+      "bounding": [
+        -3706.622507747012,
+        2539.386732265415,
+        1241.745818830661,
+        1545.6520998263964
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.2794145953766204,
+      "offset": [
+        7023.70793516768,
+        -1885.9591084585318
+      ]
+    },
+    "frontendVersion": "1.35.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
