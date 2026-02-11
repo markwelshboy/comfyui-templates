@@ -1,0 +1,389 @@
+{
+  "id": "26fa7e4a-cee8-4e1a-9700-58dcf7e50a90",
+  "revision": 0,
+  "last_node_id": 113,
+  "last_link_id": 164,
+  "nodes": [
+    {
+      "id": 20,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": [
+        7020,
+        1970
+      ],
+      "size": [
+        350,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "shape": 7,
+          "type": "PEFTLORA",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-florence2",
+        "ver": "1.0.6",
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "widgets_values": [
+        "microsoft/Florence-2-base",
+        "fp16",
+        "sdpa",
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "Florence2Run",
+      "pos": [
+        7020,
+        2150
+      ],
+      "size": [
+        350,
+        370
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 158
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "slot_index": 2,
+          "links": [
+            160
+          ]
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-florence2",
+        "ver": "1.0.6",
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        619884960207052,
+        "randomize"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 51,
+      "type": "ShowText|pysssss",
+      "pos": [
+        7390,
+        1970
+      ],
+      "size": [
+        400,
+        550
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "The image is a digital portrait of a young girl with long, straight brown hair. She has a serious expression on her face and is looking directly at the camera. Her eyes are large and round, and her eyebrows are slightly furrowed. She is wearing a black top and her hair is styled in loose waves. The background is blurred, but it appears to be a room with a window on the left side. The overall mood of the image is calm and peaceful."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 112,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        7020,
+        2570
+      ],
+      "size": [
+        280,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Fast Groups Bypasser",
+      "properties": {
+        "matchColors": "pale_blue",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 109,
+      "type": "DownloadAndLoadFlorence2Lora",
+      "pos": [
+        7020,
+        1820
+      ],
+      "size": [
+        350,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "lora",
+          "type": "PEFTLORA",
+          "links": [
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-florence2",
+        "ver": "1.0.6",
+        "Node name for S&R": "DownloadAndLoadFlorence2Lora"
+      },
+      "widgets_values": [
+        "NikshepShetty/Florence-2-pixelprose"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 107,
+      "type": "LoadImage",
+      "pos": [
+        6610,
+        1970
+      ],
+      "size": [
+        390,
+        730
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            158
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2025-11-28-150837_fabricatedXL_v60_130162720934642.png",
+        "image"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 113,
+      "type": "Note",
+      "pos": [
+        7560,
+        2610
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      25,
+      20,
+      0,
+      19,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      158,
+      107,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      160,
+      19,
+      2,
+      51,
+      0,
+      "STRING"
+    ],
+    [
+      164,
+      109,
+      0,
+      20,
+      0,
+      "PEFTLORA"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Florence2",
+      "bounding": [
+        6600,
+        1900,
+        1200,
+        810
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "LoRA",
+      "bounding": [
+        7010,
+        1750,
+        370,
+        140
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5644739300537773,
+      "offset": [
+        -5586.787744031297,
+        -1381.6050776936563
+      ]
+    },
+    "frontendVersion": "1.32.10",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

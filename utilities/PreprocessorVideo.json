@@ -1,0 +1,962 @@
+{
+  "id": "5188e119-efd1-442f-8c67-e47118c7388e",
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 49,
+  "nodes": [
+    {
+      "id": 28,
+      "type": "SaveVideo",
+      "pos": [
+        -150,
+        610
+      ],
+      "size": [
+        260,
+        380
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 30
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 31,
+      "type": "CreateVideo",
+      "pos": [
+        150,
+        575
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 32
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        30
+      ],
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "SaveVideo",
+      "pos": [
+        150,
+        610
+      ],
+      "size": [
+        260,
+        380
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 34
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 9,
+      "type": "OpenposePreprocessor",
+      "pos": [
+        150,
+        370
+      ],
+      "size": [
+        240,
+        174
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "POSE_KEYPOINT",
+          "type": "POSE_KEYPOINT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenposePreprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux",
+        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        1024,
+        "enable"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "Canny",
+      "pos": [
+        450,
+        370
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Canny",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76"
+      },
+      "widgets_values": [
+        0.4,
+        0.8
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 34,
+      "type": "SaveVideo",
+      "pos": [
+        450,
+        610
+      ],
+      "size": [
+        260,
+        380
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 23,
+      "type": "MiDaS-DepthMapPreprocessor",
+      "pos": [
+        750,
+        370
+      ],
+      "size": [
+        240,
+        106
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiDaS-DepthMapPreprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "12f35647f0d510e03b45a47fb420fe1245a575df"
+      },
+      "widgets_values": [
+        6.283185307179586,
+        0.1,
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 35,
+      "type": "SaveVideo",
+      "pos": [
+        750,
+        610
+      ],
+      "size": [
+        260,
+        380
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 41
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 33,
+      "type": "CreateVideo",
+      "pos": [
+        450,
+        575
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 37
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        30
+      ],
+      "shape": 1
+    },
+    {
+      "id": 36,
+      "type": "CreateVideo",
+      "pos": [
+        750,
+        575
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 43
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        30
+      ],
+      "shape": 1
+    },
+    {
+      "id": 27,
+      "type": "LoadVideo",
+      "pos": [
+        -590,
+        410
+      ],
+      "size": [
+        400,
+        580
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "glassesgreen.mp4",
+        "image"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "GetVideoComponents",
+      "pos": [
+        -375,
+        370
+      ],
+      "size": [
+        193.530859375,
+        66
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            26,
+            46,
+            47,
+            48
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            28,
+            32,
+            37,
+            43
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            29,
+            33,
+            38,
+            44
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetVideoComponents"
+      },
+      "widgets_values": [],
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        -150,
+        370
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux",
+        "ver": "59b027e088c1c8facf7258f6e392d16d204b4d27"
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        1024
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "CreateVideo",
+      "pos": [
+        -150,
+        575
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 49
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 28
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        30
+      ],
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "Note",
+      "pos": [
+        -900,
+        900
+      ],
+      "size": [
+        230,
+        88
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -900,
+        370
+      ],
+      "size": [
+        290,
+        322
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Fast Groups Bypasser",
+      "properties": {
+        "matchColors": "pale_blue",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      25,
+      27,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      26,
+      30,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      30,
+      1,
+      29,
+      1,
+      "AUDIO"
+    ],
+    [
+      29,
+      30,
+      2,
+      29,
+      2,
+      "FLOAT"
+    ],
+    [
+      30,
+      29,
+      0,
+      28,
+      0,
+      "VIDEO"
+    ],
+    [
+      32,
+      30,
+      1,
+      31,
+      1,
+      "AUDIO"
+    ],
+    [
+      33,
+      30,
+      2,
+      31,
+      2,
+      "FLOAT"
+    ],
+    [
+      34,
+      31,
+      0,
+      32,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      9,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      30,
+      1,
+      33,
+      1,
+      "AUDIO"
+    ],
+    [
+      38,
+      30,
+      2,
+      33,
+      2,
+      "FLOAT"
+    ],
+    [
+      39,
+      33,
+      0,
+      34,
+      0,
+      "VIDEO"
+    ],
+    [
+      40,
+      14,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      36,
+      0,
+      35,
+      0,
+      "VIDEO"
+    ],
+    [
+      43,
+      30,
+      1,
+      36,
+      1,
+      "AUDIO"
+    ],
+    [
+      44,
+      30,
+      2,
+      36,
+      2,
+      "FLOAT"
+    ],
+    [
+      45,
+      23,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      46,
+      30,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      47,
+      30,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      30,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      49,
+      4,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Load Video",
+      "bounding": [
+        -600,
+        300,
+        420,
+        700
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "AIO Aux Preprocessor",
+      "bounding": [
+        -160,
+        300,
+        280,
+        700
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "OpenPose Pose",
+      "bounding": [
+        140,
+        300,
+        280,
+        700
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Canny",
+      "bounding": [
+        440,
+        300,
+        280,
+        700
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "MiDaS Depth Map",
+      "bounding": [
+        740,
+        300,
+        280,
+        700
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9229599817708704,
+      "offset": [
+        1037.0679789027527,
+        -48.68469814077387
+      ]
+    },
+    "frontendVersion": "1.34.9",
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}

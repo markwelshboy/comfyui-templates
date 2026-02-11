@@ -1,0 +1,1189 @@
+{
+  "id": "db1fa1ed-646c-4350-ac10-5f04e81dbe3d",
+  "revision": 0,
+  "last_node_id": 59,
+  "last_link_id": 95,
+  "nodes": [
+    {
+      "id": 18,
+      "type": "ImageScaleBy",
+      "pos": [
+        1460,
+        170
+      ],
+      "size": [
+        255,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "lanczos",
+        1.5
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        1740,
+        265
+      ],
+      "size": [
+        221.98203125,
+        46
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 47
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "Note",
+      "pos": [
+        100,
+        770
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 42,
+      "type": "SeedVR2LoadVAEModel",
+      "pos": [
+        1790,
+        350
+      ],
+      "size": [
+        280,
+        298
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "links": [
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2LoadVAEModel",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        true,
+        1024,
+        128,
+        true,
+        1024,
+        128,
+        "false",
+        "cpu",
+        false
+      ],
+      "shape": 1
+    },
+    {
+      "id": 47,
+      "type": "SaveImage",
+      "pos": [
+        2400,
+        170
+      ],
+      "size": [
+        480,
+        690
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 80
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "SeedVR2LoadDiTModel",
+      "pos": [
+        1460,
+        350
+      ],
+      "size": [
+        320,
+        202
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2LoadDiTModel",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        "seedvr2_ema_7b_sharp_fp16.safetensors",
+        "cuda:0",
+        36,
+        false,
+        "cpu",
+        false,
+        "sdpa"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 44,
+      "type": "SeedVR2VideoUpscaler",
+      "pos": [
+        2080,
+        350
+      ],
+      "size": [
+        280,
+        386
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "link": 61
+        },
+        {
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "Node name for S&R": "SeedVR2VideoUpscaler",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler"
+      },
+      "widgets_values": [
+        42,
+        "fixed",
+        2048,
+        4096,
+        1,
+        false,
+        "lab",
+        0,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ],
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        1740,
+        170
+      ],
+      "size": [
+        305,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_foolhardy_Remacri.pth"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "JPEG artifacts removal FBCNN",
+      "pos": [
+        2080,
+        170
+      ],
+      "size": [
+        282.6236328125,
+        82
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "title": "JPEG Compression Removal",
+      "properties": {
+        "cnr_id": "comfyui-fbcnn",
+        "ver": "1.0.1",
+        "Node name for S&R": "JPEG artifacts removal FBCNN"
+      },
+      "widgets_values": [
+        "enable",
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 48,
+      "type": "JoinImageWithAlpha",
+      "pos": [
+        930,
+        170
+      ],
+      "size": [
+        176.86484375,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 69
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            81
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 50,
+      "type": "ImageInvert",
+      "pos": [
+        930,
+        310
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 81
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            86
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 59,
+      "type": "Morphology",
+      "pos": [
+        930,
+        725
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "Morphology"
+      },
+      "widgets_values": [
+        "erode",
+        3
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "ImageBlur",
+      "pos": [
+        1210,
+        170
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageBlur"
+      },
+      "widgets_values": [
+        2,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 56,
+      "type": "ImageSharpen",
+      "pos": [
+        1210,
+        340
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            93
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageSharpen"
+      },
+      "widgets_values": [
+        1,
+        1,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 58,
+      "type": "ImageQuantize",
+      "pos": [
+        1210,
+        530
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageQuantize"
+      },
+      "widgets_values": [
+        256,
+        "none"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 54,
+      "type": "ImageRotate",
+      "pos": [
+        930,
+        420
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageRotate"
+      },
+      "widgets_values": [
+        "90 degrees"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        100,
+        170
+      ],
+      "size": [
+        290,
+        322
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Fast Groups Bypasser",
+      "properties": {
+        "matchColors": "pale_blue",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 55,
+      "type": "ImageFlip",
+      "pos": [
+        930,
+        575
+      ],
+      "size": [
+        255,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "ImageFlip"
+      },
+      "widgets_values": [
+        "y-axis: horizontally"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 46,
+      "type": "LoadImage",
+      "pos": [
+        410,
+        170
+      ],
+      "size": [
+        480,
+        690
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            69
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2025-11-28-150837_fabricatedXL_v60_130162720934642.png",
+        "image"
+      ],
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      45,
+      18,
+      0,
+      29,
+      1,
+      "IMAGE"
+    ],
+    [
+      47,
+      30,
+      0,
+      29,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      61,
+      43,
+      0,
+      44,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      62,
+      42,
+      0,
+      44,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      63,
+      29,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      44,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      46,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      70,
+      46,
+      1,
+      48,
+      1,
+      "MASK"
+    ],
+    [
+      80,
+      15,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      81,
+      48,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      50,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      54,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      59,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      57,
+      0,
+      56,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      56,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      94,
+      55,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      58,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Save Video",
+      "bounding": [
+        2390,
+        100,
+        500,
+        770
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "Load Image",
+      "bounding": [
+        400,
+        100,
+        500,
+        770
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Upscale By Simple",
+      "bounding": [
+        1450,
+        100,
+        270,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "Upscale with Model",
+      "bounding": [
+        1730,
+        100,
+        320,
+        170
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "Compression Removal",
+      "bounding": [
+        2070,
+        100,
+        300,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 8,
+      "title": "Upscale SeedVR2",
+      "bounding": [
+        1450,
+        280,
+        920,
+        460
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 10,
+      "title": "Invert Image",
+      "bounding": [
+        920,
+        240,
+        160,
+        100
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 11,
+      "title": "Join with Alpha",
+      "bounding": [
+        920,
+        100,
+        190,
+        125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 12,
+      "title": "Image Flip",
+      "bounding": [
+        920,
+        505,
+        270,
+        135
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 13,
+      "title": "Image Rotate",
+      "bounding": [
+        920,
+        350,
+        230,
+        140
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 14,
+      "title": "Image Morphology",
+      "bounding": [
+        920,
+        655,
+        230,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 15,
+      "title": "Image Blur",
+      "bounding": [
+        1200,
+        100,
+        230,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 16,
+      "title": "Image Sharpen",
+      "bounding": [
+        1200,
+        270,
+        230,
+        180
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 18,
+      "title": "Image Quantize",
+      "bounding": [
+        1200,
+        460,
+        230,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6934334949442824,
+      "offset": [
+        444.4237206417078,
+        143.09229548075194
+      ]
+    },
+    "frontendVersion": "1.32.10",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

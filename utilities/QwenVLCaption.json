@@ -1,0 +1,230 @@
+{
+  "id": "26fa7e4a-cee8-4e1a-9700-58dcf7e50a90",
+  "revision": 0,
+  "last_node_id": 114,
+  "last_link_id": 166,
+  "nodes": [
+    {
+      "id": 51,
+      "type": "ShowText|pysssss",
+      "pos": [
+        7390,
+        1970
+      ],
+      "size": [
+        400,
+        550
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5"
+      },
+      "widgets_values": [
+        "A young woman with long brown hair and bangs wears a blue ribbed sweater over an off-the-shoulder top paired with a black pleated skirt, her eyes gently closed as she makes a peace sign gesture towards the camera while wearing fluffy cat ears adorned in grey and black fur. The scene is set against a stark white background under bright studio lighting which highlights the texture of her clothing and accessories without casting any harsh shadows, creating a clean and focused portrait. Her expression conveys calmness and playful charm, blending elements of innocence and whimsy through both her attire and body language."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 113,
+      "type": "Note",
+      "pos": [
+        7560,
+        2610
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 107,
+      "type": "LoadImage",
+      "pos": [
+        6610,
+        1970
+      ],
+      "size": [
+        390,
+        730
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            165
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75"
+      },
+      "widgets_values": [
+        "2025-12-09-131532_z_image_turbo_bf16_539466000537760.png",
+        "image"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 114,
+      "type": "AILab_QwenVL_Advanced",
+      "pos": [
+        7010,
+        1970
+      ],
+      "size": [
+        370,
+        550
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 165
+        },
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "RESPONSE",
+          "type": "STRING",
+          "links": [
+            166
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AILab_QwenVL_Advanced"
+      },
+      "widgets_values": [
+        "Qwen3-VL-2B-Instruct",
+        "None (FP16)",
+        "auto",
+        false,
+        "auto",
+        "🖼️ Detailed Description",
+        "",
+        512,
+        0.6,
+        0.9,
+        1,
+        1.2,
+        16,
+        true,
+        2518524359,
+        "randomize"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      165,
+      107,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      114,
+      0,
+      51,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "QwenVL",
+      "bounding": [
+        6600,
+        1900,
+        1200,
+        810
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2100000000000006,
+      "offset": [
+        -6199.09937691835,
+        -1704.8648426436773
+      ]
+    },
+    "frontendVersion": "1.33.14",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

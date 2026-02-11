@@ -1,0 +1,311 @@
+{
+  "id": "d7f22f6a-de79-4884-b925-2621f86c6dc6",
+  "revision": 0,
+  "last_node_id": 22,
+  "last_link_id": 22,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "JC_ExtraOptions",
+      "pos": [
+        -470,
+        170
+      ],
+      "size": [
+        330,
+        740
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "extra_options",
+          "type": "JOYCAPTION_EXTRA_OPTIONS",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-joycaption",
+        "ver": "2.0.2",
+        "Node name for S&R": "JC_ExtraOptions"
+      },
+      "widgets_values": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        270,
+        820
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "ShowText|pysssss",
+      "pos": [
+        180,
+        170
+      ],
+      "size": [
+        330,
+        440
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "This is a digital CGI image presented as a Polaroid photograph. The central subject is a chibi-style, anime-inspired character with large blue eyes and a cute, childlike appearance. She has long, blonde hair, fox ears with brown and white fur, and a fluffy fox tail. She is wearing a traditional black and white French maid outfit, complete with a white apron, black dress, and white frilled headband. Her outfit includes white wrist cuffs and black shoes. The character is holding a neutral expression, standing against a blurred background of a cityscape at sunset, with pink and orange hues in the sky and tall buildings. The Polaroid has a white border and the text \"Z Image Workflow V2\" is written in black at the bottom. A hand is holding the Polaroid from the left side. The overall style is cute and whimsical, with a focus on the character's adorable features and detailed outfit."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "JC_adv",
+      "pos": [
+        -120,
+        170
+      ],
+      "size": [
+        280,
+        440
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "extra_options",
+          "shape": 7,
+          "type": "JOYCAPTION_EXTRA_OPTIONS",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-joycaption",
+        "ver": "2.0.2",
+        "Node name for S&R": "JC_adv",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "joycaption-beta-one",
+        "Balanced (8-bit)",
+        "Descriptive",
+        "medium",
+        512,
+        0.6,
+        0.9,
+        0,
+        "",
+        "Keep in Memory"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "LoadImage",
+      "pos": [
+        -890,
+        170
+      ],
+      "size": [
+        400,
+        740
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2025-11-30-210135_z_image_turbo_bf16_107148864361483.png",
+        "image"
+      ],
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      14,
+      13,
+      0,
+      3,
+      1,
+      "JOYCAPTION_EXTRA_OPTIONS"
+    ],
+    [
+      19,
+      18,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      3,
+      1,
+      20,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "JoyCaption",
+      "bounding": [
+        -900,
+        100,
+        1420,
+        820
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        1734.7701036638812,
+        233.02106985708056
+      ]
+    },
+    "frontendVersion": "1.32.10",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}

@@ -1,0 +1,803 @@
+{
+  "id": "d7f22f6a-de79-4884-b925-2621f86c6dc6",
+  "revision": 0,
+  "last_node_id": 35,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 19,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        220,
+        10
+      ],
+      "size": [
+        279.0767578125,
+        78
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "segm/yolo11m-seg.pt"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "SEGSPreview",
+      "pos": [
+        530,
+        -30
+      ],
+      "size": [
+        270,
+        326
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 25
+        },
+        {
+          "name": "fallback_image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "SEGSPreview BBOX",
+      "properties": {
+        "Node name for S&R": "SEGSPreview"
+      },
+      "widgets_values": [
+        true,
+        0.2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        -90,
+        830
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -90,
+        -30
+      ],
+      "size": [
+        290,
+        320
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Fast Groups Bypasser",
+      "properties": {
+        "matchColors": "pale_blue",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": [
+        -90,
+        340
+      ],
+      "size": [
+        290,
+        370
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26,
+            27,
+            28,
+            29,
+            33,
+            38
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2025-12-31-112317_qwen_image_edit_2511_bf16_966731529475536.png",
+        "image"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 35,
+      "type": "MaskPreview",
+      "pos": [
+        850,
+        690
+      ],
+      "size": [
+        230,
+        220
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 41
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": [],
+      "shape": 1
+    },
+    {
+      "id": 34,
+      "type": "MaskPreview",
+      "pos": [
+        850,
+        380
+      ],
+      "size": [
+        230,
+        220
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 40
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": [],
+      "shape": 1
+    },
+    {
+      "id": 24,
+      "type": "SAMDetectorCombined",
+      "pos": [
+        540,
+        380
+      ],
+      "size": [
+        300,
+        220
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 24
+        },
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 34
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMDetectorCombined"
+      },
+      "widgets_values": [
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "SAMDetectorCombined",
+      "pos": [
+        540,
+        690
+      ],
+      "size": [
+        300,
+        220
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 36
+        },
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 39
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMDetectorCombined"
+      },
+      "widgets_values": [
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "SAMLoader",
+      "pos": [
+        220,
+        190
+      ],
+      "size": [
+        280,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            24,
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMLoader"
+      },
+      "widgets_values": [
+        "sam_vit_b_01ec64.pth",
+        "AUTO"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "SEGSPreview",
+      "pos": [
+        810,
+        -30
+      ],
+      "size": [
+        270,
+        326
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 32
+        },
+        {
+          "name": "fallback_image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "SEGSPreview SEGM",
+      "properties": {
+        "Node name for S&R": "SEGSPreview"
+      },
+      "widgets_values": [
+        true,
+        0.2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "BboxDetectorSEGS",
+      "pos": [
+        220,
+        380
+      ],
+      "size": [
+        290,
+        224
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 21
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "name": "detailer_hook",
+          "shape": 7,
+          "type": "DETAILER_HOOK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "links": [
+            25,
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BboxDetectorSEGS"
+      },
+      "widgets_values": [
+        0.4,
+        10,
+        3,
+        10,
+        "all"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 21,
+      "type": "SegmDetectorSEGS",
+      "pos": [
+        220,
+        690
+      ],
+      "size": [
+        290,
+        224
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segm_detector",
+          "type": "SEGM_DETECTOR",
+          "link": 22
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "name": "detailer_hook",
+          "shape": 7,
+          "type": "DETAILER_HOOK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "links": [
+            32,
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SegmDetectorSEGS"
+      },
+      "widgets_values": [
+        0.4,
+        10,
+        3,
+        10,
+        "all"
+      ],
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      21,
+      19,
+      0,
+      20,
+      0,
+      "BBOX_DETECTOR"
+    ],
+    [
+      22,
+      19,
+      1,
+      21,
+      0,
+      "SEGM_DETECTOR"
+    ],
+    [
+      24,
+      22,
+      0,
+      24,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      25,
+      20,
+      0,
+      25,
+      0,
+      "SEGS"
+    ],
+    [
+      26,
+      26,
+      0,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      27,
+      26,
+      0,
+      21,
+      1,
+      "IMAGE"
+    ],
+    [
+      28,
+      26,
+      0,
+      25,
+      1,
+      "IMAGE"
+    ],
+    [
+      29,
+      26,
+      0,
+      24,
+      2,
+      "IMAGE"
+    ],
+    [
+      32,
+      21,
+      0,
+      29,
+      0,
+      "SEGS"
+    ],
+    [
+      33,
+      26,
+      0,
+      29,
+      1,
+      "IMAGE"
+    ],
+    [
+      34,
+      20,
+      0,
+      24,
+      1,
+      "SEGS"
+    ],
+    [
+      36,
+      22,
+      0,
+      32,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      38,
+      26,
+      0,
+      32,
+      2,
+      "IMAGE"
+    ],
+    [
+      39,
+      21,
+      0,
+      32,
+      1,
+      "SEGS"
+    ],
+    [
+      40,
+      24,
+      0,
+      34,
+      0,
+      "MASK"
+    ],
+    [
+      41,
+      32,
+      0,
+      35,
+      0,
+      "MASK"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Detection Model Testing",
+      "bounding": [
+        -100,
+        -100,
+        1200,
+        1030
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "SAMLoader",
+      "bounding": [
+        210,
+        120,
+        300,
+        165
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "SEGM Detector",
+      "bounding": [
+        210,
+        620,
+        310,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "BBOX Detector",
+      "bounding": [
+        210,
+        310,
+        310,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "SAM+BBOX Detector",
+      "bounding": [
+        530,
+        310,
+        560,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "SAM+SEGM Detector",
+      "bounding": [
+        530,
+        620,
+        560,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "UltralyticsDetectorProvider",
+      "bounding": [
+        210,
+        -60,
+        300,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6209213230591553,
+      "offset": [
+        887.5096658369632,
+        381.61369229273214
+      ]
+    },
+    "frontendVersion": "1.35.9",
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

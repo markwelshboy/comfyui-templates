@@ -1,0 +1,263 @@
+{
+  "id": "d7f22f6a-de79-4884-b925-2621f86c6dc6",
+  "revision": 0,
+  "last_node_id": 18,
+  "last_link_id": 20,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "ImageBatchPath",
+      "pos": [
+        -90,
+        -30
+      ],
+      "size": [
+        390,
+        180
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            12,
+            19
+          ]
+        },
+        {
+          "name": "IMAGE_PATH",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatchPath",
+        "cnr_id": "comfyui-joycaption",
+        "ver": "2.0.2",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "C:\\Users\\input",
+        0,
+        1,
+        "sequential"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "WD14Tagger|pysssss",
+      "pos": [
+        -90,
+        200
+      ],
+      "size": [
+        290,
+        180
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WD14Tagger|pysssss"
+      },
+      "widgets_values": [
+        "wd-v1-4-moat-tagger-v2",
+        0.35,
+        0.85,
+        true,
+        false,
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        470,
+        290
+      ],
+      "size": [
+        230,
+        90
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 8,
+      "type": "CaptionSaver",
+      "pos": [
+        330,
+        -30
+      ],
+      "size": [
+        370,
+        180
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "link": 20
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "link": 17
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "CaptionSaver",
+        "cnr_id": "comfyui-joycaption",
+        "ver": "2.0.2",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "C:\\Users\\output\n",
+        "",
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      12,
+      9,
+      0,
+      8,
+      2,
+      "IMAGE"
+    ],
+    [
+      17,
+      9,
+      1,
+      8,
+      1,
+      "STRING"
+    ],
+    [
+      19,
+      9,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      18,
+      0,
+      8,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Batch WD14 Tagger",
+      "bounding": [
+        -100,
+        -100,
+        810,
+        490
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        688.0303341982471,
+        225.2360747637008
+      ]
+    },
+    "frontendVersion": "1.34.9",
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

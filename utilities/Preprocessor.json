@@ -1,0 +1,587 @@
+{
+  "id": "5188e119-efd1-442f-8c67-e47118c7388e",
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -800,
+        370
+      ],
+      "size": [
+        290,
+        322
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Fast Groups Bypasser",
+      "properties": {
+        "matchColors": "pale_blue",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "SaveImage",
+      "pos": [
+        -150,
+        580
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "SaveImage",
+      "pos": [
+        130,
+        580
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 9,
+      "type": "OpenposePreprocessor",
+      "pos": [
+        130,
+        370
+      ],
+      "size": [
+        240,
+        174
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "POSE_KEYPOINT",
+          "type": "POSE_KEYPOINT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
+        "Node name for S&R": "OpenposePreprocessor",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        1024,
+        "enable"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "Canny",
+      "pos": [
+        410,
+        370
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "Canny"
+      },
+      "widgets_values": [
+        0.4,
+        0.8
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        -490,
+        370
+      ],
+      "size": [
+        300,
+        470
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            5,
+            10,
+            15,
+            22
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Load ControlNet Image",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2025-11-28-150837_fabricatedXL_v60_130162720934642.png",
+        "image"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "SaveImage",
+      "pos": [
+        410,
+        580
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "SaveImage",
+      "pos": [
+        690,
+        580
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 23,
+      "type": "MiDaS-DepthMapPreprocessor",
+      "pos": [
+        690,
+        370
+      ],
+      "size": [
+        240,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "12f35647f0d510e03b45a47fb420fe1245a575df",
+        "Node name for S&R": "MiDaS-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        6.283185307179586,
+        0.1,
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        -150,
+        370
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "59b027e088c1c8facf7258f6e392d16d204b4d27",
+        "Node name for S&R": "AIO_Preprocessor",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux"
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        1024
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "Note",
+      "pos": [
+        -800,
+        750
+      ],
+      "size": [
+        230,
+        88
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Credits",
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/user/Legendaer"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      5,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      1,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      1,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      4,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      9,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      14,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      1,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      23,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Load Image",
+      "bounding": [
+        -500,
+        300,
+        320,
+        550
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "AIO Aux Preprocessor",
+      "bounding": [
+        -160,
+        300,
+        260,
+        550
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "OpenPose Pose",
+      "bounding": [
+        120,
+        300,
+        260,
+        550
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Canny",
+      "bounding": [
+        400,
+        300,
+        260,
+        550
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "MiDaS Depth Map",
+      "bounding": [
+        680,
+        300,
+        260,
+        550
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6303940863129954,
+      "offset": [
+        1812.9640882505732,
+        281.25095899025223
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.32.10"
+  },
+  "version": 0.4
+}
