@@ -1,0 +1,64 @@
+{
+  "id": "2c4b4f90-1c29-4054-a0f8-82388cf2dd13",
+  "revision": 0,
+  "last_node_id": 1,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Qwen3CaptionBatch",
+      "pos": [
+        812.1812456099525,
+        79.10997655092744
+      ],
+      "size": [
+        572.9504657192158,
+        523.4431758206462
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "summary",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_qwenvl_promptcaption",
+        "ver": "1.1.0",
+        "Node name for S&R": "Qwen3CaptionBatch"
+      },
+      "widgets_values": [
+        "Qwen3-VL-4B-Instruct-FP8\\model-00001-of-00002.safetensors",
+        "auto",
+        true,
+        "English",
+        512,
+        "E:\\1 - AI Workflows And Demos\\AI Characters\\Nancy Lora\\lora_dataset_202607",
+        "E:\\1 - AI Workflows And Demos\\AI Characters\\Nancy Lora\\lora_dataset_202607",
+        " You are the top art director; I need some inspiration to create stunning images using z-Image. I need the text prompt from your inspiration idea with the following structure: Subject+Scene+Action\n\nHere is the instruction:\nThe subject includes humans, animals, or any imagined subject\nThe scene includes the environment in which the subject is located, including the foreground and background, and can be a real scene or an imagined fictional scene\nActions include the movement state of the subject or non subject, which can be small, large, delicate, or partial movements, or overall movements\n\nfor examples:\n\nexample 1:\nA radiant warrior stands triumphantly on a desolate highway, her form bathed in the warm glow of sunlight. She wears a striking red and gold costume that exudes strength and grace—a fitted corset with intricate golden accents, a flowing blue skirt, and armored gauntlets that gleam under the sun. Her boots are sturdy yet elegant, adorned with metallic details that complement her confident stance. A tiara rests atop her dark, wavy hair, adding an air of regality to her appearance.\nHer arms are outstretched wide, as if embracing the world or welcoming something unseen. The backdrop is a vast, arid landscape stretching into the horizon—dry sand dunes and sparse vegetation frame the scene, emphasizing the isolation and grandeur of the moment. The road beneath her feet stretches endlessly, symbolizing a journey or mission ahead. Her expression is one of joy, determination, and hope, radiating positivity and empowerment. This character embodies resilience, courage, and the power of conviction, ready to face whatever lies beyond the horizon.\n\nexample 2:\nA bold and dynamic scene unfolds on a rainy, neon-lit city street at night. A confident young woman with short blonde hair stands beside a sleek blue motorcycle, exuding energy and style. She is dressed in a striking outfit that combines casual cool with urban chic: a blue denim jacket layered over a white crop top, paired with form-fitting black leather pants that accentuate her silhouette. Her footwear consists of black sneakers, adding a touch of edginess to the ensemble.\nThe motorcycle, a high-performance Ducati Panigale V4, gleams under the rain, its glossy surface reflecting the vibrant lights of the urban backdrop. The bike’s aggressive design, racing decals, and glowing headlights emphasize speed and power, complementing the woman’s assertive presence. Raindrops cascade down around them, creating a reflective sheen on the pavement and adding a moody, atmospheric quality to the scene.\nAs the camera pans around her, we see her striking various poses—hands casually resting on her hips, one hand touching the motorcycle, or arms crossed confidently. Her expression is cool and composed, conveying a sense of freedom and adventure. The background features blurred city lights, glowing billboards, and distant traffic, enhancing the futuristic, nocturnal ambiance. The overall video captures the essence of youthful rebellion, modern fashion, and the thrill of urban exploration.\n\nexample 3:\nA confident and stylish young woman stands on a sunlit city street, exuding elegance and poise. She is dressed in a chic, modern outfit that combines comfort with sophistication. Her ensemble features a cropped white long-sleeve top, which accentuates her toned midriff and adds a touch of femininity. The top is form-fitting, highlighting her curves while maintaining a sleek silhouette.\nPaired with the top are high-waisted denim shorts, slightly frayed at the hem, adding a casual yet trendy edge to her look. The shorts are fitted but not overly tight, providing a balanced blend of style and comfort. She completes her outfit with beige high-heeled shoes, which elevate her height and add an element of refinement to her overall appearance.\nHer short, blonde hair is styled in a neat bob, framing her face beautifully and giving her a polished, contemporary look. A delicate gold necklace adorns her neck, adding a subtle touch of glamour. One hand rests casually in the pocket of her shorts, while the other hangs by her side, conveying confidence and ease.\nThe background features a classic urban setting with brick buildings, large windows, and a clear blue sky, suggesting a bright, sunny day. The sunlight casts soft shadows on the pavement, enhancing the natural lighting and emphasizing the clean lines of her outfit. The scene captures a moment of youthful confidence and modern fashion, blending simplicity with bold style in a vibrant city environment."
+      ]
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 2.357947691000002,
+      "offset": [
+        -460.1798403602943,
+        -78.60125160800658
+      ]
+    },
+    "frontendVersion": "1.45.20",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
