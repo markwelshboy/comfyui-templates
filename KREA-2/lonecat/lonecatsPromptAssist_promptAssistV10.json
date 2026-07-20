@@ -1,0 +1,1277 @@
+{
+  "id": "aba490d7-b1d2-4f31-a784-e5cb28d9da6c",
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "RemoveDuplicateTags|LP",
+      "pos": [
+        -4470,
+        -2090
+      ],
+      "size": [
+        230,
+        30
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "tags TEXT",
+          "type": "STRING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "Remove Dups",
+      "properties": {
+        "cnr_id": "comfyui-levelpixel",
+        "ver": "1.3.4",
+        "Node name for S&R": "RemoveDuplicateTags|LP",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 5,
+      "type": "CR Text Replace",
+      "pos": [
+        -4470,
+        -2050
+      ],
+      "size": [
+        270,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "*",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "word ✂️",
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text Replace",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "right corner",
+        " ",
+        "left corner",
+        " ",
+        "bottom right corner",
+        " "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "CR Text Replace",
+      "pos": [
+        -4300,
+        -2050
+      ],
+      "size": [
+        270,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "*",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "word ✂️",
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text Replace",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Signature",
+        " ",
+        "written",
+        " ",
+        "artist's",
+        " "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "CR Text Replace",
+      "pos": [
+        -4300,
+        -2090
+      ],
+      "size": [
+        270,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "*",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "word ✂️",
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text Replace",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "watermark",
+        " ",
+        "name",
+        " ",
+        "Logo",
+        ""
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 9,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -4470,
+        -2430
+      ],
+      "size": [
+        300,
+        90
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "put here to save time",
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "psst...over here 🤫",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "📝 Img Prompt",
+        "showNav": false,
+        "showAllGraphs": false,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "color": "#c3782d",
+      "bgcolor": "#af6419"
+    },
+    {
+      "id": 11,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -4470,
+        -2330
+      ],
+      "size": [
+        300,
+        200
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "Florence Prompt",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "A portrait of a young woman with long, wavy blonde hair and blue eyes, wearing a parka with a fur hood. the woman is positioned in the middle of the image, looking directly at the camera with a neutral expression. her skin appears to be fair, and her hair is styled in loose waves. her eyes are a striking blue color, and she has a slight blush on her cheeks. she is wearing a khaki parka with a fur hood, which is open, revealing her natural beauty. the background is blurred, but it appears to be an indoor setting with natural light coming through a window, creating a soft and natural lighting effect. the image is taken from a close-up angle, focusing on the woman's face and upper body. the fur trim on the parka adds to the overall aesthetic of the image. the woman is wearing a fur-lined parka, which is a winter accessory that keeps her warm and cozy. the overall mood of the image is peaceful and contemplative, with the woman's expression and natural beauty creating a sense of calmness and serenity.,"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 16,
+      "type": "GetNode",
+      "pos": [
+        -3790,
+        -2420
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "title": "Get_Prompt Tag",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Prompt Tag"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 22,
+      "type": "Label (rgthree)",
+      "pos": [
+        -5110,
+        -2690
+      ],
+      "size": [
+        637.4267578125,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Lonecat's",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 23,
+      "type": "Label (rgthree)",
+      "pos": [
+        -4430,
+        -2680
+      ],
+      "size": [
+        1215.6982421875,
+        125
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Prompt Assist Module",
+      "properties": {
+        "fontSize": 125,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 21,
+      "type": "Reroute",
+      "pos": [
+        -3300,
+        -2510
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "attach to your clip text encoder (positive)",
+          "name": "",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#46ff46",
+      "bgcolor": "#32fa32"
+    },
+    {
+      "id": 18,
+      "type": "Reroute",
+      "pos": [
+        -3800,
+        -2510
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "attach your base prompt",
+          "name": "",
+          "type": "*",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#46ff46",
+      "bgcolor": "#32fa32"
+    },
+    {
+      "id": 19,
+      "type": "String",
+      "pos": [
+        -4140,
+        -2480
+      ],
+      "size": [
+        330,
+        120
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "Replace with your base prompt",
+      "properties": {
+        "cnr_id": "ComfyLiterals",
+        "ver": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
+        "Node name for S&R": "String",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "This is where your base prompt would appear, or you can leave it blank\n\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 17,
+      "type": "JoinStrings",
+      "pos": [
+        -3590,
+        -2480
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 12
+        },
+        {
+          "name": "string2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "e27a505b3ba6ce42687fe00500deda103d9d6071",
+        "Node name for S&R": "JoinStrings",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "  ,   "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 24,
+      "type": "MarkdownNote",
+      "pos": [
+        -4130,
+        -2300
+      ],
+      "size": [
+        630,
+        470
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note:",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "## Plugging this into a workflow: \n- Plug this in between your prompt and your positive clip text endoders using the 🟢 reroutes\n\n\n- 💡This works with any model and anyone's workflow. \n\n**Seed** \n\n- You can hook it up to yours or totally unplug it and let the node choose. \n\n\n---\n### Follow me on CivitAi [HERE](https://civitai.com/user/lonecatone23)\n\n### Instagram: [synth.studio.models](https://www.instagram.com/synth.studio.models/)\n\n### This represents many of hours of work. If you enjoy it, please 👍like, 💬 comment , and feel free to ⚡tip or **[Buy me a☕](https://ko-fi.com/lonecatone)**\n\n---\n\n## 将此节点接入工作流：\n- 使用 🟢  reroute 节点，将它插在你的 **prompt** 和 **positive clip text encoders** 之间\n- 💡 此节点兼容任何模型和任意人的工作流。\n\n**Seed（种子）**\n- 你可以连接到自己的种子节点，也可以完全断开，让节点自动选择。\n\n---\n### 在 Civitai 上关注我 [HERE](https://civitai.com/user/lonecatone23)\n### Instagram: [synth.studio.models](https://www.instagram.com/synth.studio.models/)\n### 这花费了我大量时间和精力。如果你喜欢，请 👍点赞、💬留言，也欢迎 ⚡打赏 或 **[请我喝杯☕](https://ko-fi.com/lonecatone)**"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 13,
+      "type": "LoadImage",
+      "pos": [
+        -5210,
+        -2480
+      ],
+      "size": [
+        420,
+        680
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Lonecats Krea 2 With Metadata 2026-07-05-171727.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 15,
+      "type": "Seed (rgthree)",
+      "pos": [
+        -5210,
+        -1750
+      ],
+      "size": [
+        290,
+        130
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "27b4f4cdcf3b127c29d5d8135ac1536ecbd4c383",
+        "randomMax": 1125899906842624,
+        "randomMin": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        8675309,
+        "",
+        "",
+        "okay"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 14,
+      "type": "SetNode",
+      "pos": [
+        -4900,
+        -1750
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Set_Seed",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "Seed",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Seed"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 20,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3300,
+        -2430
+      ],
+      "size": [
+        320,
+        360
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "show text",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "This is where your base prompt would appear, or you can leave it blank\n\n\n  ,   A portrait of a young woman with long, wavy blonde hair and blue eyes, wearing a parka with a fur hood. the woman is positioned in the middle of the image, looking directly at the camera with a neutral expression. her skin appears to be fair, and her hair is styled in loose waves. her eyes are a striking blue color, and she has a slight blush on her cheeks. she is wearing a khaki parka with a fur hood, which is open, revealing her natural beauty. the background is blurred, but it appears to be an indoor setting with natural light coming through a window, creating a soft and natural lighting effect. the image is taken from a close-up angle, focusing on the woman's face and upper body. the fur trim on the parka adds to the overall aesthetic of the image. the woman is wearing a fur-lined parka, which is a winter accessory that keeps her warm and cozy. the overall mood of the image is peaceful and contemplative, with the woman's expression and natural beauty creating a sense of calmness and serenity.,"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 3,
+      "type": "GetNode",
+      "pos": [
+        -4470,
+        -2010
+      ],
+      "size": [
+        210,
+        40
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "Get_Seed",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Seed"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 1,
+      "type": "Florence2Run",
+      "pos": [
+        -4730,
+        -2430
+      ],
+      "size": [
+        250,
+        420
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 18
+        },
+        {
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-florence2",
+        "ver": "ee64d1ef3fedcb26fff9bcc78065f9eea21ccb87",
+        "Node name for S&R": "Florence2Run",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        },
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        1063845238036229,
+        "randomize"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 7,
+      "type": "SetNode",
+      "pos": [
+        -4330,
+        -2010
+      ],
+      "size": [
+        210,
+        40
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Set_Prompt Tag",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "Prompt Tag",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Prompt Tag"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "MarkdownNote",
+      "pos": [
+        -4730,
+        -1820
+      ],
+      "size": [
+        560,
+        390
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Notes / 笔记 :",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "## Florence Notes:\n\n\n### 💡 I'll typically run this once, cut & paste the prompt out of it, drop it into the prompt area, and edit accordingly. \n\n## settings\n- **Model** any of the *\"prompt_gen_base\"* models work. Size and version affect the outcome.\n- bf16 works just as well as FP16 and is the best balanced choice \n- **caption/ detailed_caption/ more_detailed_caption:** works best for natural language models (Flux, ZIT, Qwen)\n- **prompt_gen_tags:** Good for SDXL, *but...*\n- **⭐ prompt_gen_mixed_caption:** works extremely well for SDXL, ILLU, Pony, N00B as well as for Zit. (mixed reviews on Flux. tends to just double stuff up)\n\n---\n\n## Florence 笔记：\n### 💡 我通常只会运行一次，然后将生成的 prompt 剪切粘贴出来，放入提示词区域，再进行相应编辑。\n\n## 设置\n- **Model**：使用任意 *\"prompt_gen_base\"* 模型即可。模型大小和版本会影响生成效果。\n- bf16 的效果与 FP16 相当，是平衡性最好的选择。\n- **caption / detailed_caption / more_detailed_caption**：最适合自然语言模型（Flux、ZIT、Qwen）。\n- **prompt_gen_tags**：适合 SDXL，*但……*\n- **⭐ prompt_gen_mixed_caption**：对 SDXL、ILLU、Pony、N00B 以及 Zit 效果极佳。（Flux 评价不一，容易出现内容重复。）\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 25,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": [
+        -4730,
+        -1970
+      ],
+      "size": [
+        560,
+        110
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "shape": 7,
+          "type": "PEFTLORA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-florence2",
+        "ver": "9ece3de914214c5f581d725167bc9d0eeb0d1120",
+        "Node name for S&R": "DownloadAndLoadFlorence2Model",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "MiaoshouAI/Florence-2-large-PromptGen-v2.0",
+        "bf16",
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      2,
+      3,
+      0,
+      1,
+      2,
+      "INT"
+    ],
+    [
+      3,
+      1,
+      2,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      8,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      11,
+      0,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      7,
+      4,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      6,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      9,
+      13,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      15,
+      0,
+      14,
+      0,
+      "INT"
+    ],
+    [
+      11,
+      16,
+      0,
+      17,
+      1,
+      "STRING"
+    ],
+    [
+      12,
+      18,
+      0,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      13,
+      19,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      14,
+      17,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      17,
+      0,
+      21,
+      0,
+      "STRING"
+    ],
+    [
+      18,
+      25,
+      0,
+      1,
+      1,
+      "FL2MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "📝 Img Prompt",
+      "bounding": [
+        -4740,
+        -2510,
+        580,
+        1090
+      ],
+      "color": "#8A8",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5559917313492303,
+      "offset": [
+        5812.761250200555,
+        3033.9858240827184
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.45.21",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
